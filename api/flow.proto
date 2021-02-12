@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package api;
+
+option go_package="api";
+
+
+enum StatusType {
+    OK = 0;
+    ERROR = 1;
+}
+
+enum ProviderType {
+    MASTER = 0;
+    EXECUTOR = 1;
+    AGENT = 2;
+    GATEWAY = 3;
+}
+
+enum SimulatorType {
+    RVO2 = 0;
+    SUMO = 1;
+}
+
+message Agent {
+    string id = 1;
+    string name = 2;
+    AgentType type = 3;
+    Vector position = 4;
+    Vector velocity = 5;
+    Route route = 6;
+    string data = 7;
+}
+
+enum AgentType {
+    PERSON = 0;
+    CAR = 1;
+}
+
+message Route {
+    repeated TransitPoint transit_points = 1;
+    TransitPoint next_transit = 2;
+}
+
+message TransitPoint{
+    string id = 1;
+    string status = 2;
+    Vector point = 3;
+}
+
+message Vector {
+    double x = 1;
+    double y = 2;
+}
+
+message Provider {
+	uint64 id = 1;
+    ProviderType type = 2;
+}
