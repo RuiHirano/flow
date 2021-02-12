@@ -38,6 +38,9 @@ func TestUtil(t *testing.T) {
 
 	// DecideNextTransit
 	t.Run("DecideNextTransitで経由地についている場合、次のtransitが帰ってくる", func (t *testing.T) {
-		
+		transitPoints := []*api.Point{&}
+		position := &api.Point{X: 10, Y: 10}
+		nextTransitPoint := DecideNextTransitPoint(transitPoints, position, )
+		assert.Equal(t, distance, float64(50))
 	})
 }

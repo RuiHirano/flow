@@ -57,3 +57,14 @@ message Provider {
 	uint64 id = 1;
     ProviderType type = 2;
 }
+
+message FlowMsg {
+    uint64 msg_id = 1;
+    uint64 sender_id = 2;
+    MsgType type = 3;
+
+}
+
+enum MsgType {
+    SET_AGENT_REQUEST = 0;
+}

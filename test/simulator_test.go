@@ -27,12 +27,12 @@ func TestSimulator(t *testing.T) {
 		sim := factory.Create(stype)
 		sim.SetParameter(&simulator.RVO2Parameter{
 			timeStep: 0.1,
-	neighborDist: 0.1,
-	maxNeighbors: 0.1,
-	timeHorizon: 0.1,
-	timeHorizonObst: 0.1,
-	radius: 0.1,
-	maxSpeed: 0.1,
+			neighborDist: 0.1,
+			maxNeighbors: 0.1,
+			timeHorizon: 0.1,
+			timeHorizonObst: 0.1,
+			radius: 0.1,
+			maxSpeed: 0.1,
 		})
 		agents := sim.CalcNextAgents(mockAgents)
 		assert.Equal(t, len(agents), 10)

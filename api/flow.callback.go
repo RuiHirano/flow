@@ -1,4 +1,4 @@
-package provider
+package api
 
 import (
 	sxapi "github.com/synerex/synerex_api"

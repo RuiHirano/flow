@@ -3,3 +3,9 @@ Provider
 ☐ ProviderFactoryからProviderを取得
 ☐ SynerexServerへ接続
 ☐ NodeServerへ接続
+
+Synchronyzer
+☐ targetIdを入れてそれらがpublishされるまで待機
+    ✔ isFinishSyncで揃っているか確認 @done(21-02-12 22:24)
+    ✔ PublishMsgでchがなければerrorを返す @done(21-02-12 22:34)
+    ☐ SyncMsgsでtargetsがくるまで待機する
